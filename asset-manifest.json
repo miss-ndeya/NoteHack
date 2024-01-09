@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/NoteHack/static/css/main.3f9c7957.css",
+    "main.js": "/NoteHack/static/js/main.353087fc.js",
+    "index.html": "/NoteHack/index.html",
+    "main.3f9c7957.css.map": "/NoteHack/static/css/main.3f9c7957.css.map",
+    "main.353087fc.js.map": "/NoteHack/static/js/main.353087fc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3f9c7957.css",
+    "static/js/main.353087fc.js"
+  ]
+}
