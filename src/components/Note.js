@@ -5,7 +5,7 @@ import HeaderNote from "./HeaderNote";
 const Note = ({ notes, removeNote, updateNote, clearAll, editNote }) => {
   const nombreNotes = notes.length;
   return (
-    <div className="bg-light p-3 py-4 rounded-3 ">
+    <div className="bg-light p-3 py-4 pb-5 rounded-3 ">
       <HeaderNote nombreNotes={nombreNotes} clearAll={clearAll} />
       <NoteListe
         notes={notes}
