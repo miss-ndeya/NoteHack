@@ -8,7 +8,9 @@ export const NoteContextProvider = ({ children }) => {
   );
   const [note, setNote] = useState("");
   const [modifierId, setModifierId] = useState(false);
-  const [background, setBackground] = useState( JSON.parse(localStorage.getItem("background")) || "btn-1");
+  const [background, setBackground] = useState(
+    JSON.parse(localStorage.getItem("background")) || "btn-1"
+  );
   const [buttonPadding, setButtonPadding] = useState(2);
 
   const changerDeTheme = (theme) => {
@@ -23,7 +25,9 @@ export const NoteContextProvider = ({ children }) => {
     if (note.trim()) {
       if (modifierId !== false) {
         const modifierNotes = notes.map((noteModif) =>
-          noteModif.id === modifierId ? { ...noteModif, note: note } : noteModif
+          noteModif.id === modifierId
+            ? { ...noteModif, note: note, date: new Date().toLocaleString() }
+            : noteModif
         );
 
         setNotes(modifierNotes);
@@ -33,7 +37,7 @@ export const NoteContextProvider = ({ children }) => {
         const newNote = {
           id: Math.random(),
           note: note,
-          date: new Date().toDateString(),
+          date: new Date().toLocaleString(),
         };
 
         setNotes([...notes, newNote]);
