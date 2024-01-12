@@ -4,17 +4,17 @@ import { FaPen } from "react-icons/fa6";
 
 const Card = ({ note, removeNote, editNote }) => {
   return (
-    <div className="mx-auto col-12 col-md-6 col-lg-4 rounded-3">
-      <div className="card pb-0 justify-content-center mx- hcrd border-start border-3 border-0 border-primary">
+    <div className="col-12 col-md-6 col-lg-4 rounded-3">
+      <div className="card pb-0 justify-content-center shadow hcrd border-start border-3 border-0 border-primary">
         <div className="card-body d-flex justify-content-between pb-0 mb-0 gap-">
           <div className="card-title p-">
             <Title
               children={note.note}
-              className="card-title fs-5 fw-normal mb-0"
+              className="card-title fs-5 fw-normal mb"
             />
-            <p className="text-wrap not">{note.date}</p>
+            <p className="text-wrap not text-secondary">{note.date}</p>
           </div>
-          <div className="card-text d-flex px- pb-0 mb-0">
+          <div className="card-text  d-flex px- pb-0 mb-0">
             <FaPen
               className="text-primary me-2"
               onClick={() => editNote(note.id)}

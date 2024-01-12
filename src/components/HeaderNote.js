@@ -4,7 +4,7 @@ import Button from "./Button";
 
 const HeaderNote = ({ nombreNotes, clearAll }) => {
   return (
-    <div className="d-flex justify-content-between pb-4  border-bottom">
+    <div className="d-flex justify-content-between align-items-center py-4 pt-3  border-bottom">
       <div className="d-flex align-items-center gap-2">
         <Title children="Notes" className="fs-5 fw-bold" />
         <Button

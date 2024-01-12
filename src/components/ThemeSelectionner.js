@@ -1,13 +1,14 @@
 import React from "react";
 import Button from "./Button";
-import { useNoteContext } from "../contextes/NotesContext";
 
-const ThemeSelectionner = () => {
-  const { changerDeTheme, buttonPadding, handlePaddingChange } =
-    useNoteContext();
+const ThemeSelectionner = ({
+  changerDeTheme,
+  buttonPadding,
+  setButtonPadding,
+}) => {
   const handleClick = (theme) => {
     changerDeTheme(theme);
-    handlePaddingChange(3);
+    setButtonPadding(3);
   };
 
   const themes = ["btn-1", "btn-2", "btn-3", "btn-4", "btn-5", "btn-6"];
@@ -16,8 +17,8 @@ const ThemeSelectionner = () => {
     <div>
       {themes.map((theme) => (
         <Button
-        key={theme}
-          className={`p-${buttonPadding} p-2 ${theme} rounded-circle btn me-1`}
+          key={theme}
+          className={`p-${buttonPadding}  ${theme} rounded-circle border-0 btn me-1 bod`}
           onClick={() => handleClick(theme)}
         />
       ))}
